@@ -1,0 +1,58 @@
+n = -2:1;
+x = [1, -2, 3, 6];
+
+// y1(n) = x(-n)
+n1 = -n($:-1:1);
+y1 = x($:-1:1);
+
+scf(1); clf();
+subplot(2,1,1); 
+plot2d3(n, x, style=2); 
+plot2d(n, x, style=-9); xgrid();
+title("Original x(n)", "fontsize", 3); 
+xlabel("n"); ylabel("Amplitude");
+a = gca(); a.data_bounds = [-3, -3; 3, 8];
+
+subplot(2,1,2); 
+plot2d3(n1, y1, style=5);
+ plot2d(n1, y1, style=-9); xgrid();
+title("y1(n) = x(-n)", "fontsize", 3); 
+xlabel("n"); ylabel("Amplitude");
+a = gca(); a.data_bounds = [-3, -3; 3, 8];
+
+// y2(n) = x(n+3)
+n2 = n - 3;    
+y2 = x;
+scf(2); clf();
+subplot(2,1,1); 
+plot2d3(n, x, style=2); 
+plot2d(n, x, style=-9); xgrid();
+title("Original x(n)", "fontsize", 3); 
+xlabel("n"); ylabel("Amplitude");
+a = gca(); a.data_bounds = [-6, -3; 2, 8];
+
+subplot(2,1,2); 
+plot2d3(n2, y2, style=3);
+plot2d(n2, y2, style=-9); xgrid();
+title("y2(n) = x(n+3)", "fontsize", 3); 
+xlabel("n"); ylabel("Amplitude");
+a = gca(); a.data_bounds = [-6, -3; 2, 8];
+
+// y3(n) = 2x(-n-2)
+n3 = n1 - 2;    
+y3 = 2 * y1; 
+
+scf(3); clf();
+subplot(2,1,1); 
+plot2d3(n, x, style=2); 
+plot2d(n, x, style=-9); xgrid();
+title("Original x(n)", "fontsize", 3); 
+xlabel("n"); ylabel("Amplitude");
+a = gca(); a.data_bounds = [-5, -5; 2, 14]; 
+
+subplot(2,1,2); 
+plot2d3(n3, y3, style=6);
+ plot2d(n3, y3, style=-9); xgrid();
+title("y3(n) = 2x(-n-2)", "fontsize", 3); 
+xlabel("n"); ylabel("Amplitude");
+a = gca(); a.data_bounds = [-5, -5; 2, 14];
