@@ -20,5 +20,3 @@ function [yn, yorigin] = fold(xn, xorigin)
 endfunction
 
 [yn, yorigin] = fold([1, -2, 3, 6], 3)
-disp("yn = "); disp(yn);
-disp("yorigin = "); disp(yorigin);

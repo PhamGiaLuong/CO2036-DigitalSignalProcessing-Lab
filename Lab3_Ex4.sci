@@ -31,5 +31,3 @@ function [yn, yorigin] = add(x1n, x1origin, x2n, x2origin)
 endfunction
 
 [yn, yorigin] = add([0, 1, 3, -2], 1, [1, 1, 2, 3], 2)
-disp("yn = "); disp(yn);
-disp("yorigin = "); disp(yorigin);

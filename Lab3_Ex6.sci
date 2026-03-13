@@ -22,5 +22,3 @@ function [yn, yorigin] = convolution(xn, xorigin, hn, horigin)
 endfunction
 
 [yn, yorigin] = convolution([0, 1, 3, -2], 1, [1, 1, 2, 3], 2)
-disp("yn = "); disp(yn);
-disp("yorigin = "); disp(yorigin);

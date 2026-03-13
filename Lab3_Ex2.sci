@@ -20,5 +20,3 @@ function [yn, yorigin] = advance(xn, xorigin, k)
 endfunction
 
 [yn, yorigin] = advance([1, -2, 3, 6], 3, 1)
-disp("yn = "); disp(yn);
-disp("yorigin = "); disp(yorigin);

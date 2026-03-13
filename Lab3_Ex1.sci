@@ -20,5 +20,3 @@ function [yn, yorigin] = delay(xn, xorigin, k)
 endfunction
 
 [yn, yorigin] = delay([1, -2, 3, 6], 3, 1)
-disp("yn = "); disp(yn);
-disp("yorigin = "); disp(yorigin);
