@@ -2,7 +2,7 @@
 atomsLoad('IPCV');
 
 // Read the input image from the specified path
-img = imread('D:\HCMUT\HK252\CO2035-DigitalSignalProcessing\Week3\Scilab-src\LogoBachkhoa.png');
+img = imread('D:\HCMUT\HK252\CO2035-DigitalSignalProcessing\Week3\Scilab-src\QuyNhon.jpg');
 
 // Convert the RGB image to Grayscale
 gray_img = rgb2gray(img);
@@ -20,12 +20,16 @@ subplot(1,2,2);
 imshow(eq_img);
 title('Histogram Equalized Image');
 
-// Display the histograms of both images
+// Extract histogram data for explicit plotting
+[count_orig, bins_orig] = imhist(gray_img);
+[count_eq, bins_eq] = imhist(eq_img);
+
+// Display the histograms of both images using plot2d3 (vertical bars)
 scf(1);
 subplot(1,2,1);
-imhist(gray_img);
+plot2d3(bins_orig, count_orig);
 title('Histogram of Original Image');
 
 subplot(1,2,2);
-imhist(eq_img);
+plot2d3(bins_eq, count_eq);
 title('Histogram of Equalized Image');
