@@ -15,6 +15,7 @@ plot(w, mag_H);
 title('Amplitude Spectrum of h(n)');
 xlabel('Frequency w (rad/sample)');
 ylabel('|H(w)|');
+xgrid();
 
 // Plot Phase Spectrum
 subplot(2,1,2);
@@ -22,3 +23,4 @@ plot(w, phase_H);
 title('Phase Spectrum of h(n)');
 xlabel('Frequency w (rad/sample)');
 ylabel('Phase (rad)');
+xgrid();

@@ -18,6 +18,7 @@ plot(w, mag_X2);
 title('Amplitude Spectrum of x2(n)');
 xlabel('Frequency w (rad/sample)');
 ylabel('|X2(w)|');
+xgrid();
 
 // Plot Phase Spectrum
 subplot(2,1,2);
@@ -25,3 +26,4 @@ plot(w, phase_X2);
 title('Phase Spectrum of x2(n)');
 xlabel('Frequency w (rad/sample)');
 ylabel('Phase (rad)');
+xgrid();
