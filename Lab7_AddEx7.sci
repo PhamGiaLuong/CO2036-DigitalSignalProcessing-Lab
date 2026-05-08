@@ -1,5 +1,5 @@
 // Compute linear convolution using FFT and zero-padding
-function y = lin_conv_fft(x, h)
+function y = linear_conv_fft(x, h)
     Lx = length(x);
     Lh = length(h);
     
@@ -21,7 +21,7 @@ endfunction
 x = [1, 2, 3, 4, 5];
 h = [1, 1, 1];
 
-y_custom = lin_conv_fft(x, h);
+y_custom = linear_conv_fft(x, h);
 y_builtin = conv(x, h);
 
 // Display results
