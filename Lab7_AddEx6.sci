@@ -34,6 +34,3 @@ disp(y_fft);
 
 disp("Result using direct method:");
 disp(y_direct);
-
-disp("Difference between two methods:");
-disp(norm(y_fft - y_direct));
